@@ -1,23 +1,3 @@
-/* ===== EDIT HERE: your WhatsApp number (country code, no + or spaces) and business name ===== */
-const WHATSAPP_NUMBER = "234XXXXXXXXXX";
-const BUSINESS_NAME = "[BUSINESS NAME]";
-
-const MESSAGES = {
-  general: "I would like to request a quote for my event.",
-  decor: "I would like a quote for event decoration.",
-  cake: "I would like to order a custom cake.",
-  food: "I would like a quote for event food and confectionery.",
-  wedding: "I am planning a wedding and would like a quote for décor, cake, and confectionery.",
-  birthday: "I am planning a birthday party and would like a quote.",
-  corporate: "I am planning a corporate event/conference and would like a quote."
-};
-
-document.querySelectorAll("[data-wa]").forEach(a => {
-  const msg = `Hello ${BUSINESS_NAME}, ${MESSAGES[a.dataset.wa] || MESSAGES.general}`;
-  a.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
-  a.target = "_blank"; a.rel = "noopener";
-});
-
 // Mobile menu
 const burger = document.querySelector(".burger"), nav = document.querySelector(".nav");
 burger.addEventListener("click", () => {

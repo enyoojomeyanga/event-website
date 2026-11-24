@@ -9,7 +9,7 @@ No framework, no Node.js, no build step, no `.env` file needed. Just open `index
 site/
 ├── index.html      Page content (text, sections, links)
 ├── styles.css      Colours, fonts, layout
-├── script.js       WhatsApp number/messages, menu, gallery filter
+├── script.js       Mobile menu, gallery filter
 ├── favicon.svg     Browser tab icon
 ├── vercel.json     Optional Vercel settings
 ├── .gitignore      Files Git should ignore
@@ -26,13 +26,7 @@ Open the folder in a text editor (recommended: free **VS Code**, https://code.vi
 | What | Find | Replace with |
 |---|---|---|
 | Business name | `[BUSINESS NAME]` (index.html) | Her business name |
-| Business name for WhatsApp messages | `BUSINESS_NAME` at the top of **script.js** | Same name, inside the quotes |
-| **WhatsApp number** | `WHATSAPP_NUMBER` at the top of **script.js** | e.g. `"2348012345678"` (234 + number without the first 0; no `+`, spaces or dashes). Also Find & Replace `234XXXXXXXXXX` in index.html as a backup |
-| Phone (shown text) | `[PHONE NUMBER]` | e.g. `0801 234 5678` |
-| Phone (tap to call) | `+234XXXXXXXXXX` | e.g. `+2348012345678` |
-| Instagram | `INSTAGRAM_HANDLE` | handle without @ |
-| TikTok | `TIKTOK_HANDLE` | handle without @ |
-| Email | `EMAIL@EXAMPLE.COM` and `[EMAIL ADDRESS]` | her email |
+| WhatsApp quote links | Search **index.html** for `wa.me/2349026995371` | Update all matching numbers together. Each link includes its own URL-encoded inquiry. |
 | Location | `[CITY/STATE]` | e.g. `Abuja` |
 | Prices | `₦[PRICE]` | e.g. `Starting from ₦150,000`, or change the whole line to `Custom quote` |
 | Testimonials | search `REPLACE: Testimonials` | real quotes and names |
@@ -171,7 +165,7 @@ Tip: small text changes can be made directly on github.com (open the file, click
 
 **Setup**
 - *Photos don't show:* file names are case-sensitive on the live site. Use exactly `decor-1.jpg` (lowercase, `.jpg` not `.jpeg`/`.JPG`), or edit the `src` in index.html.
-- *WhatsApp button opens wrong number:* you must change `WHATSAPP_NUMBER` in **script.js**. Format `2348012345678`, no `+`, no leading 0.
+- *WhatsApp button opens wrong number:* check the recipient in every `wa.me/` link in **index.html**. Format `2348012345678`, no `+`, no leading 0.
 - *Buttons do nothing / menu doesn't open:* `script.js` must be in the same folder as `index.html`. Press F12 and check the Console for errors.
 - *`py` or `python3` not found:* install Python from https://python.org (tick "Add to PATH" on Windows), or just double-click `index.html`.
 - *Port already in use:* use another number, e.g. `8080`.
